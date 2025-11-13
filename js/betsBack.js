@@ -104,3 +104,33 @@ function atualizarImagem() {
 setContestAnalysis(betsBackData.contestCount);
 createBetsBackAnalysisTable(betsBackData.analysis.betsBackAnalysis);
 
+// Função para copiar a legenda
+function copiarLegenda(botao) {
+    const concurso = document.getElementById('concursoInput').value || '3535';
+    const data = document.getElementById('dataInput').value || '11/05/2025';
+    
+    const legenda = `🍀 Resultado da Lotofácil — Concurso ${concurso} (${data})
+
+Confira as dezenas sorteadas e compare com suas análises no DasLoto.
+
+📊 Descubra padrões, repetições e tendências diretamente no app.
+
+#DasLoto #Lotofacil #Resultados #Loterias #Estatísticas #Simulações #JogosInteligentes`;
+
+    // Copiar para o clipboard
+    navigator.clipboard.writeText(legenda).then(() => {
+        // Feedback visual
+        const textoOriginal = botao.textContent;
+        botao.textContent = '✓ Copiado!';
+        botao.style.backgroundColor = '#4CAF50';
+        
+        setTimeout(() => {
+            botao.textContent = textoOriginal;
+            botao.style.backgroundColor = '';
+        }, 2000);
+    }).catch(err => {
+        console.error('Erro ao copiar: ', err);
+        alert('Erro ao copiar a legenda!');
+    });
+}
+
