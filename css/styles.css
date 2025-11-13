@@ -1,0 +1,166 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-size: cover;
+}
+
+.container {
+    width: 1080px;
+    height: 1350px;
+    margin: auto;
+    background: url('https://static.wixstatic.com/media/f902d0_12bf2d57e26d456cbdb3ba7fb0fe1f3f~mv2.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.container.betsback-container {
+    background: url('../assets/bets_back.png') no-repeat center center;
+    background-size: cover;
+}
+
+.header {
+    margin: 20px 0;
+}
+
+.header-title,
+.header-subtitle {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header h1 {
+    margin: 0;
+    color: #1F1A1D;
+    margin: 0 0 16px 0;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.header-title h1 {
+    margin: 0;
+    color: #1F1A1D;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 32px;
+    color: #1F1A1D;
+    font-weight: 300;
+}
+
+.header-subtitle h2 {
+    margin: 0;
+    font-size: 32px;
+    color: #1F1A1D;
+    font-weight: 300;
+}
+
+.content-container {
+    width: 883px;
+    margin: auto;
+}
+
+.logo {
+    margin: 20px 0;
+}
+
+.logo img {
+    height: 55px;
+    vertical-align: bottom;
+}
+
+/* Menu superior */
+body.menu {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.menu a.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.selected {
+    background-color: #4CAF50;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Estilo para os botões de download e link */
+.btn {
+    padding: 14px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-download {
+    background: #940087;
+}
+
+.btn-download:hover {
+    background: #7a006e;
+}
+
+.btn-link {
+    background: #5e0857;
+}
+
+.btn-link:hover {
+    background: #4a0045;
+}
+
+/* Final menu superior */
+
+/* Adicionar margin top e bottom para imagens específicas */
+img[src*="soma"],
+img[src*="comportamentoDezenas"],
+img[src*="dezenasRepetidas"],
+img[src*="analiseCiclos"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

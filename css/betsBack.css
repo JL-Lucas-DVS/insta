@@ -1,0 +1,213 @@
+table {
+    width: 643px;
+    margin: auto;
+    border-spacing: 8px;
+}
+
+.styled-table {
+    vertical-align: middle;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid #D2C2CB;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 22px;
+    text-align: center;
+    border: 1px solid #D2C2CB;
+}
+
+.styled-table thead th {
+    background-color: #F8EEF2;
+    color: #1F1A1D;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.styled-table tbody tr {
+    background-color: #FFFFFF;
+    color: #1F1A1D;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.styled-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 22px;
+}
+
+.styled-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 22px;
+}
+
+.analysis-text {
+    font-size: 32px;
+    font-weight: 300;
+    color: #1F1A1D;
+    margin: 20px 0;
+    margin-top: 80px;
+}
+
+/* Estilos para Lotofácil - Posicionamento Absoluto */
+.header-title {
+    position: absolute;
+    top: 245px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 58px;
+    font-weight: bold;
+    text-align: center;
+     color: #ffffff;
+     font-weight: bold;
+    
+}
+
+.contest-box {
+    position: absolute;
+    top: 215px;
+    left: 50%;
+    margin-top: 138px;
+    transform: translateX(-50%);
+    font-size: 50px;
+    font-weight: bold;
+    color: #940087;
+   
+    width: fit-content;
+}
+
+.date-box {
+    position: absolute;
+    top: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 40px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #940087;
+    border: 3px solid #940087;
+    width: fit-content;
+}
+
+.result-label {
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #940087;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.lottery-title {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 56px;
+    font-weight: bold;
+    color: #940087;
+    width: fit-content;
+}
+
+.numbers-grid {
+   
+    position: absolute;
+    top: 735px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 19px 24px;
+    width: 100%;
+    max-width: 700px;
+    margin-left: 3px;
+}
+
+.number {
+    
+    color: white;
+    width: 124px;
+    height: 124px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: bold;
+    border-radius: 15px;
+  
+}
+
+/* Estilos do Formulário */
+.form-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    color: #940087;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1F1A1D;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #940087;
+    border-radius: 8px;
+    font-family: 'Roboto', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #7a006e;
+    background-color: #fff9fc;
+}
+
+.btn-submit {
+    width: 100%;
+    background: #940087;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #7a006e;
+}
+
+#imageSection {
+    margin-top: 40px;
+}

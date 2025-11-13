@@ -1,0 +1,313 @@
+/* Estilos específicos para a página de Post para Stores */
+
+body {
+    background-color: #ffffff; /* fundo da tela deve ser branco */
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* (preview-wrapper removido) */
+
+/* preview wrapper removido */
+
+.page-wrapper h1 {
+    color: #1f1a1d;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.store-post {
+    /* TAMANHO FIXO do post: 1080 x 1920 (sempre igual, independente da tela) */
+    width: 1080px;
+    height: 1920px;
+    margin: 0 auto;
+    background-color: #940087; /* cor de fundo do post */
+    position: relative;
+  
+    overflow: hidden;
+    
+    /* imagem por cima da cor de fundo */
+    background-image: url('../assets/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* transform-origin não necessário após remoção do preview escalado */
+
+/* Título sobreposto (asset `title.png`) */
+.store-post .post-header {
+    position: absolute;
+    top: 48px; /* Subtraído 50px do valor original */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    max-width: 1000px;
+    z-index: 2;
+}
+
+/* transform-origin removido */
+/* Título sobreposto (asset `title.png`) */
+.store-post .post-modality{
+    position: absolute;
+    top: 500px; /* Subtraído 50px do valor original */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+
+}
+.store-post .post-title {
+    display: block;
+    width: 100%;
+    pointer-events: none;
+    
+  
+}
+
+/* Badge (LOTOFACIL) logo imediatamente abaixo do título (dentro do .post-header) */
+.store-post .post-badge {
+    position: absolute;
+    
+
+    padding: 20px 90px; /* ajuste proporcional ao novo tamanho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  #940087;
+    border-radius: 999px;
+    border:2px solid #ffffff;
+    color: #ffffff;
+    font-weight: 700;
+  
+    z-index: 1;
+}
+.store-post .post-badge span {
+    display: inline-block;
+    font-family: inherit;
+    /* fonte fixa para não reduzir com o tamanho da tela (post fixo) */
+    font-size: 50px; /* aumentado proporcionalmente */
+    letter-spacing: 2px;
+}
+.store-post .post-badge::before,
+.store-post .post-badge::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    height: 2px;
+    background: #ffffff;
+    z-index: 3;
+    border-radius: 22px;
+}
+.store-post .post-badge::before {
+    right: 100%;
+  
+}
+.store-post .post-badge::after {
+    left: 100%;
+  
+}
+
+/* Informação do filtro sendo analisado (logo abaixo da loteria/badge) */
+.store-post .post-filter {
+    margin-top: 0.4rem;
+    color: #ffffff;
+    font-size: clamp(12px, 1.6vw, 18px);
+    font-weight: 500;
+    text-align: center;
+    z-index: 6;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+}
+.store-post .post-filter #filter-name {
+    font-weight: 700;
+    margin-left: 6px;
+}
+
+/* Container com a informação 'Análise do filtro pares' abaixo do post-modality */
+.store-post .cards-stack{
+    position: absolute;
+    top: 700.4px; /* Subtraído 50px do valor original */
+    left: 49%;
+    transform: translateX(-50%);
+    width: 864px;
+    max-width: 864px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px; /* espaçamento vertical entre os cards */
+    z-index: 5;
+}
+
+.store-post .post-filter-analysis {
+    position: relative;
+    width: 864px;
+    max-width: 864px;
+    padding: 18px 16px;
+    background-color: #730d6a; /* cor solicitada */
+    color: #ffffff; /* fonte branca */
+    text-align: center;
+    border-radius: 22px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card de Análise e Recomendações (estilo conforme imagem) */
+.store-post .analysis-card{
+    position: relative;
+    width: 100%;
+    background:  #730d6a;
+    border-radius: 22px;
+    padding: 16px;
+    z-index: 6;
+
+}
+/* Card para a grade de números (mesma aparência do analysis-card) */
+.store-post .numbers-card{
+    position: relative;
+    width: 100%;
+    background: #730d6a;
+    border-radius: 22px;
+    padding: 16px;
+    z-index: 6;
+}
+.store-post .numbers-card h2{
+    margin: 8px 0 20px 0;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 400;
+    display:flex;align-items:center;gap:10px
+}
+.store-post .numbers-card .numbers-inner{
+    background: #5e0857;
+    border-radius: 22px;
+    padding: 14px;
+}
+.store-post .numbers-card .numbers-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* mesma distância usada nas recomendações */
+    align-items: center;
+    justify-content: flex-start; /* mantém o último item alinhado à esquerda */
+}
+.store-post .numbers-card .num{
+    width: 94px;
+    height: 94px; /* quadrado perfeito */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #b2198f; /* tom vibrante para os blocos */
+    color: #ffffff;
+    border-radius: 22px;
+    font-weight: 500;
+    font-size: 32px;
+   
+}
+
+.store-post .analysis-card h2{
+    margin: 8px 0 20px 0;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 400;
+    display:flex;align-items:center;gap:10px
+}
+.store-post .analysis-card .rec-box{
+    background: #5e0857;
+    border-radius:22px;
+    padding: 14px;
+}
+.store-post .analysis-card .rec-item{
+    display: flex;
+    gap: 28px;
+    align-items: center; /* centraliza verticalmente o ícone na linha */
+    margin-bottom: 32px;
+    color: #f2cbfa;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.store-post .analysis-card .rec-item:last-child{margin-bottom:0}
+.store-post .rec-icon{width:60px;height:60px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.store-post .rec-icon-green{background:#60e39a;color:#08321a}
+.store-post .rec-icon-yellow{background:#ffd36b;color:#6b4200}
+.store-post .rec-text {
+    flex: 1;
+    text-align: left;
+    font-size: 32px;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+
+/* Responsividade removida: o post tem tamanho fixo conforme solicitado */
+
+/* Tornar responsivo em telas menores */
+/* Responsividade removida: o post tem tamanho fixo conforme solicitado */
+
+/* Marca no rodapé esquerdo (dark_mark_lefth.svg) */
+.store-post .post-mark {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2%; /* distância relativa do rodapé */
+    width: 35%; /* tamanho relativo ao container para manter proporção */
+    max-width: 350px;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0.98;
+}
+
+/* Responsividade removida: o post tem tamanho fixo conforme solicitado */
+
+/* Botões de ação */
+#btnDownload, #btnLink {
+    padding: 14px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+#btnDownload {
+    background: #940087;
+}
+
+#btnLink {
+    background: #5e0857;
+}
+
+#btnDownload:hover {
+    background: #7a006e;
+}
+
+#btnLink:hover {
+    background: #4a0045;
+}
+
+/* Link gerado */
+#linkContainer a {
+    font-size: 18px;
+    color: #940087;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#linkContainer a:hover {
+    text-decoration: underline;
+}
